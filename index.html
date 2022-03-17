@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeApi</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./script/script.js"></script>
+</head>
+<body>
+    <header id="titulo">
+        <h1>PokeDex</h1>
+    </header>
+    <main id="contenedor">
+        <section id="cont__uno">
+            <h2>Busca tu pokemon favorito</h2>
+            <input type="text" id="inpPoke" name="" placeholder="Nombre de tu pokemon aqui">
+            <button onclick="traerPokemon()" id="btnBuscar">Buscar</button>
+        </section>
+        <section id="cont__dos">
+            <!---->
+            <div id="dos__uno">
+                <img id="imgPoke" src="./img/error.png" alt="">
+                <div>
+                    <label for="">Nombre:</label>
+                    <small id="namePoke"></small>
+                </div>
+                <div>
+                    <label for="">Tipo:</label>
+                    <small id="tipoPoke"></small>
+                </div>
+                <div>
+                    <label for="">Altura:</label>
+                    <small id="alturaPoke"></small>
+                    <label for="">Peso:</label>
+                    <small id="pesoPoke"></small>
+                </div>
+            </div>
+            <!---->
+            <div id="dos__dos">
+                <div>
+                    <h3>Movimientos:</h3>
+                    <div id="cont__movimientos">
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <h3>Estadisticas:</h3>
+                    <div id="cont__estadisticas"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
