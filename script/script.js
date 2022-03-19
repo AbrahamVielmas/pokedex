@@ -1,32 +1,3 @@
-const fetchPokemon = () =>{
-    const pokeinp = document.getElementById('pokeinp');
-    let pokeName = pokeinp.value;
-    const url = `https://pokeapi.co/api/v2/pokemon/${pokeName}`;
-    fetch(url)
-    .then((res) =>{
-        if(res.status != 200){
-            console.log(res, 'hubo un error');
-        }else{
-            return res.json();
-        }
-    }).then((data) => {
-        if(data){
-            console.log(data);
-            let pokeImg = data.sprites.front_default;
-            pokePhoto = document.getElementById('pokeImg');
-            pokePhoto.src = pokeImg;
-
-            let namePoke = data.forms[0].name;
-            txtName = document.getElementById('namePoke');
-            txtName.textContent = namePoke;
-
-            let tipoPoke = data.types[0].type.name;
-            txtTipo = document.getElementById('tipoPoke');
-            txtTipo.textContent = tipoPoke;
-        }
-    })
-}
-
 const traerPokemon = () =>{
     const pokeinp = document.getElementById('inpPoke');
     let pokeName = pokeinp.value;
